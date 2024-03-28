@@ -1,0 +1,31 @@
+{
+  "name": "@springcomp/generator-readme",
+  "type": "module",
+  "version": "0.9.0",
+  "description": "Yeoman generator that creates a README.md file",
+  "author": {
+    "name": "Springcomp",
+    "email": "springcomp@users.no-reply.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/springcomp/generator-readme.git"
+  },
+  "license": "Apache-2.0",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "dependencies": {
+    "generator-license": "^5.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^4.5.4"
+  }
+}

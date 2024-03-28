@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2020"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "noImplicitAny": true,
+    "outDir": "dist/generators",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "es2020",
+    "typeRoots": ["node_modules/@types", "types"]
+  },
+  "include": [
+    "generators/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "generators/app/templates",
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
