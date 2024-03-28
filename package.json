@@ -19,13 +19,34 @@
     "yeoman-generator"
   ],
   "scripts": {
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "clean": "shx rm -rf ./dist/",
+    "install": "npm run build && npm run _app_template_files && npm run _boilerplate-files && npm run _clear-package-json",
+    "_boilerplate-files": "shx cp LICENSE ./dist/ && shx cp README.md ./dist/",
+    "_app_templates_folder": "npx mkdirp -p ./dist/generators/app/templates ",
+    "_app_template_files": "npm run _app_templates_folder && shx cp -r generators/app/templates/* ./dist/generators/app/templates/",
+    "_clear-package-json": "npx clear-package-json package.json --output ./dist/package.json",
+    "run": "node dist/generators/app/index.js"
   },
   "dependencies": {
-    "generator-license": "^5.5.0"
+    "@types/validate-npm-package-name": "^4.0.2",
+    "generator-license": "^5.5.0",
+    "import-meta-resolve": "^4.0.0",
+    "inquirer": "^9.2.14",
+    "inquirer-npm-name": "^4.0.0",
+    "lodash": "^4.17.21",
+    "validate-npm-package-name": "^5.0.0",
+    "yeoman-generator": "^7.1.1"
   },
   "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/inquirer-npm-name": "^3.0.7",
+    "@types/lodash": "^4.14.178",
+    "@types/mkdirp": "^1.0.2",
     "@types/node": "^20.11.17",
+    "clean-publish": "^3.4.4",
+    "mkdirp": "^1.0.4",
+    "shx": "^0.3.4",
     "typescript": "^4.5.4"
   }
 }
